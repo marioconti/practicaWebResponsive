@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  /* 
+    Esta es la primera propiedad que añadimos
+    Con esta propiedad decimos que no cambie o se deforme el elemento cuando sumemos el border o el padding
+     */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0mm;
+}
+
+.header {
+  font-size: 25px;
+  padding: 40px;
+  text-align: center;
+  background-color: #07022B;
+  color: white;
+  /* color es para el color de la letra */
+}
+
+a {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 70px;
+  margin-left: 40px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columna1 {
+  /* esto se va a poner a todo el contenedor padre*/
+  flex: 30%;
+  background-color: #354877;
+  padding: 20px;
+}
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  background-color: #3a3dec;
+}
+
+.redes {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  background-color: grey;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  /* esto es para que cuando se agradende o se vea en un dispositivo
+  mas pequeño la pantalla en vez de tener en fila ponga en columnas  (flex-dirección: column;) */
+  .row,
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  a {
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    justify-content: start;
+  }
+}
